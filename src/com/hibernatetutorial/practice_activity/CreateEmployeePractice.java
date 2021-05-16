@@ -23,7 +23,7 @@ public class CreateEmployeePractice {
 					
 					// create a student object
 					System.out.println("Creating the Employee object...");
-					Employee tempEmployee = new Employee("Donald", "Duck", "Rolls");					
+					Employee tempEmployee = new Employee("James", "Franco", "Acting");					
 					
 					// start the transaction
 					session.beginTransaction();
