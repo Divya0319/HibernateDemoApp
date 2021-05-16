@@ -24,7 +24,9 @@ public class Employee {
 	
 
 	
-	
+	public Employee() {
+		
+	}
 	public Employee(String firstName, String lastName, String company) {
 		this.firstName = firstName;
 		this.lastName = lastName;
