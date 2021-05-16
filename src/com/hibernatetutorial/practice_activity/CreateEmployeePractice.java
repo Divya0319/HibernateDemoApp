@@ -1,10 +1,13 @@
 package com.hibernatetutorial.practice_activity;
 
+import java.util.Date;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import com.hibernatetutorial.practice_activity.entity.Employee;
+import com.hibernatetutorial.practice_activity.utils.DateUtils;
 
 public class CreateEmployeePractice {
 
@@ -20,10 +23,13 @@ public class CreateEmployeePractice {
 				Session session = factory.getCurrentSession();
 				
 				try {
+					String dateOfBirth = "19/09/1995";
+					
+					Date theDateOfBirth = DateUtils.parseDate(dateOfBirth);
 					
 					// create a student object
 					System.out.println("Creating the Employee object...");
-					Employee tempEmployee = new Employee("James", "Franco", "Acting");					
+					Employee tempEmployee = new Employee("Daniel", "Dan", theDateOfBirth, "Yamaha");					
 					
 					// start the transaction
 					session.beginTransaction();
@@ -38,6 +44,10 @@ public class CreateEmployeePractice {
 					session.getTransaction().commit();
 					
 					System.out.println("Done!");
+				} catch(Exception exc) {
+					
+					exc.printStackTrace();
+					
 				}
 				finally {
 					factory.close();
