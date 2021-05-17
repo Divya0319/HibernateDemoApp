@@ -27,7 +27,7 @@ public class CreateDemo {
 		try {
 			
 			// create the objects
-			/*Instructor tempInstructor = 
+			Instructor tempInstructor = 
 					new Instructor("Chad", "Darby", "darby@luv2code.com");
 			
 			InstructorDetail tempInstructorDetail = 
@@ -36,7 +36,7 @@ public class CreateDemo {
 							"Luv 2 code");
 			
 			
-			*/
+			
 			
 			// create the objects
 			/*Instructor tempInstructor = 
@@ -46,37 +46,14 @@ public class CreateDemo {
 					new InstructorDetail(
 							"http://www.youtube.com",
 							"Guitar");
-			
-			tempInstructor.setInstructorDetail(tempInstructorDetail);
 			*/
+			tempInstructor.setInstructorDetail(tempInstructorDetail);
+			
 			
 			// start the transaction
 			session.beginTransaction();
 			
-			//session.save(tempInstructor);
-			
-			// get instructor by primary key / id
-			 int theId = 1;
-			Instructor tempInstructor = 
-					session.get(Instructor.class, theId);
-			
-			System.out.println("------------       -----------------");
-			System.out.println("Found Intructor: " + tempInstructor);
-			System.out.println("------------       -----------------");
-			
-			
-			// delete the instructor
-			if(tempInstructor != null) {
-				
-				System.out.println("------------       -----------------");
-				System.out.println("Deleting: " + tempInstructor);
-				System.out.println("------------       -----------------");
-				
-				// Note: will ALSO delete associated "details" object
-				// because of CascadeType.ALL
-				//
-				session.delete(tempInstructor);
-			}
+			session.save(tempInstructor);
 			
 			
 			
