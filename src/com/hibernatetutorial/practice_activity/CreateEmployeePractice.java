@@ -23,13 +23,13 @@ public class CreateEmployeePractice {
 				Session session = factory.getCurrentSession();
 				
 				try {
-					String dateOfBirth = "19/09/1995";
+					String dateOfBirth = "09/12/1952";
 					
 					Date theDateOfBirth = DateUtils.parseDate(dateOfBirth);
 					
 					// create a student object
 					System.out.println("Creating the Employee object...");
-					Employee tempEmployee = new Employee("Daniel", "Dan", theDateOfBirth, "Yamaha");					
+					Employee tempEmployee = new Employee("Sandman", "Baseplate", theDateOfBirth, "Captain");					
 					
 					// start the transaction
 					session.beginTransaction();
